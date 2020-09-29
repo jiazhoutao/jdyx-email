@@ -1,0 +1,10 @@
+<div class="example-container" [formGroup]="myForm">
+  <mat-form-field>
+    <input matInput placeholder="请输入手机号码" type="text" formControlName="mobile" #mobileInput>
+    <mat-error>{{getPhoneErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <div class="example-button-row">
+    <button  type="button" class="btn btn-primary" mat-button (click)="mobileSet()" [disabled]="!isSubmitable">设置</button>&nbsp;
+    <button  type="button" class="btn btn-default" mat-button color="primary" (click)="cancel()">取消</button>
+  </div>
+</div>

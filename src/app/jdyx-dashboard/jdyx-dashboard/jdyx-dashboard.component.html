@@ -1,0 +1,35 @@
+<div class="container">
+  <div *ngIf="isUserEmailExist">
+    <div class="row">
+      <div class="col-xs-12"><h4 style="color: indianred;font-size: 16px;font-weight: bold">您已开通集大邮箱,您的邮箱信息如下：</h4></div>
+    </div>
+    <div class="row">
+      <label class="col-xs-12 col-md-4">邮箱地址：</label>
+      <div class="col-xs-12 col-md-8">{{emailInfo.account_name}}@{{emailInfo.domain}}</div>
+    </div>
+    <div class="row">
+      <div *ngIf="emailInfo.mobile"><label class="col-xs-12  col-md-4">绑定手机号码：</label>
+        <div class="col-xs-12  col-md-8">{{emailInfo.mobile}}</div>
+      </div>
+    </div>
+    <div *ngIf="!emailInfo.mobile" class="row" style="color: indianred"><div class="col-xs-12">您尚未绑定手机号，请尽快绑定</div></div>
+    <div class="row">
+      <a class="btn btn-link" (click)="reSetPhone()" href="javascript:void(0)">重新绑定手机号</a>
+      <a class="btn btn-link" (click)="reSetPassword()" href="javascript:void(0)">修改密码</a>
+    </div>
+  </div>
+<!--  <div *ngIf="!isUserEmailExist">-->
+    <div class="row">
+      <div class="col-xs-12"><h4 style="color: darkolivegreen;font-size: 16px;font-weight: bold">您尚未开通集大邮箱</h4></div>
+      </div>
+      <div class="row">
+    <div><a class="btn btn-link" (click)="createNewEmail()" href="javascript:void(0)">开通集大邮箱</a></div>
+      </div>
+<!--  </div>-->
+  <div class="row"><app-jdyx-password class="col-xs-12" *ngIf="isResetPassword" (passWordResetChange)="cancel()"></app-jdyx-password></div>
+  <div class="row"><app-jdyx-mobile class="col-xs-12" *ngIf="isSetPhone" (mobilesetChange)="cancel()"></app-jdyx-mobile></div>
+  <div class="row"><app-jdyx-email class="col-xs-12" *ngIf="isCreateNewEmail" (emailChange)="cancel()"></app-jdyx-email></div>
+</div>
+
+
+

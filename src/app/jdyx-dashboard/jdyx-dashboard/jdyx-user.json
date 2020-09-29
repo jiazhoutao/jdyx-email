@@ -1,0 +1,52 @@
+{
+  "con": {
+    "account_name": "201672000048",
+    "account_openid": "d199f15bd1c4447517df06a97f123674",
+    "addr_right": 1,
+    "addr_visible": 1,
+    "alias_list": [],
+    "authcode_status": 0,
+    "bigattach_right": 1,
+    "bigattach_status": 1,
+    "create_time": 1494898577000,
+    "dashi": 1,
+    "domain": "jmu.edu.cn",
+    "domain_openid": "8210b3b8e69662ac",
+    "flashmail": 1,
+    "fwd": 0,
+    "fwdauth": 1,
+    "gender": "0",
+    "imap": 1,
+    "job_no": "201672000048",
+    "mailaccount_list": [
+      {
+        "account_name": "201672000048",
+        "domain": "jmu.edu.cn",
+        "fwd": 0,
+        "fwdmauth": 1,
+        "rs_right": 0
+      }
+    ],
+    "main_account_login_forbidden": 0,
+    "nickname": "贾周涛",
+    "org_openid": "8210b3b8e69662ac",
+    "pass_general": 0,
+    "pass_mobile": 0,
+    "passchange_req": 0,
+    "passchange_time": 1597136638000,
+    "pop": 1,
+    "remark": "",
+    "secondary_logon": 0,
+    "smtp": 1,
+    "status": 0,
+    "type": 2,
+    "unit_id": "712414",
+    "unit_list": [
+      "712414"
+    ],
+    "web": 1,
+    "yixin": 1
+  },
+  "suc": true,
+  "ver": 1600676243482
+}
