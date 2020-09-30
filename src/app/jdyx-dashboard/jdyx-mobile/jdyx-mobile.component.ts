@@ -4,6 +4,7 @@ import {jdyxMobileValidator} from '../jdyx-password/jdyx-password-validator.dire
 import {ParentComponent} from '../ParentComponent';
 import {ActivatedRoute, Router} from '@angular/router';
 import {JdyxDashboardService} from '../jdyx-dashboard/jdyx-dashboard.service';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-jdyx-mobile',
@@ -17,7 +18,7 @@ export class JdyxMobileComponent  extends ParentComponent  implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor(private route: ActivatedRoute, private router: Router, private emailService: JdyxDashboardService) {
+  constructor(private route: ActivatedRoute, private router: Router, private emailService: JdyxDashboardService, private dialog: MatDialog) {
     super();
   }
 
@@ -28,7 +29,13 @@ export class JdyxMobileComponent  extends ParentComponent  implements OnInit {
 
   mobileSet(): void {
     const mobileValue: string = this.myForm.controls.mobile.value;
+
     this.emailService.mobileSet(mobileValue).subscribe(next => {
+      if (next.suc){
+
+      }
+      else{}
+
       console.log(next);
     });
 

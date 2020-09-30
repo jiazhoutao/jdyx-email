@@ -1,7 +1,14 @@
-<div class="container">
+<header class="frame-head" style="margin: 1px;">
+  <div style="background-image: url('/assets/img/jdyx_header.jpg');height: 36px;">
+    <div style="height: 36px;width: 36px;background-color: aliceblue;border-radius: 18px;float: left"><img
+      src="/assets/img/jdyx_logo.png" style="height: 36px"/></div>
+    <div style="font-size: 25px;">集美大学邮箱自助开通</div>
+  </div>
+</header>
+<div class="container" style="border: 1px solid #827a7a52">
   <div *ngIf="isUserEmailExist">
     <div class="row">
-      <div class="col-xs-12"><h4 style="color: indianred;font-size: 16px;font-weight: bold">您已开通集大邮箱,您的邮箱信息如下：</h4></div>
+      <div class="col-xs-12"><h4 style="color: #43a047;font-size: 16px;font-weight: bold">您已开通集大邮箱,您的邮箱信息如下：</h4></div>
     </div>
     <div class="row">
       <label class="col-xs-12 col-md-4">邮箱地址：</label>
@@ -18,18 +25,19 @@
       <a class="btn btn-link" (click)="reSetPassword()" href="javascript:void(0)">修改密码</a>
     </div>
   </div>
-<!--  <div *ngIf="!isUserEmailExist">-->
+  <div *ngIf="!isUserEmailExist">
     <div class="row">
-      <div class="col-xs-12"><h4 style="color: darkolivegreen;font-size: 16px;font-weight: bold">您尚未开通集大邮箱</h4></div>
+      <div class="col-xs-12"><h4 style="color: indianred;font-size: 16px;font-weight: bold">您尚未开通集大邮箱</h4></div>
       </div>
       <div class="row">
     <div><a class="btn btn-link" (click)="createNewEmail()" href="javascript:void(0)">开通集大邮箱</a></div>
       </div>
-<!--  </div>-->
+  </div>
   <div class="row"><app-jdyx-password class="col-xs-12" *ngIf="isResetPassword" (passWordResetChange)="cancel()"></app-jdyx-password></div>
   <div class="row"><app-jdyx-mobile class="col-xs-12" *ngIf="isSetPhone" (mobilesetChange)="cancel()"></app-jdyx-mobile></div>
   <div class="row"><app-jdyx-email class="col-xs-12" *ngIf="isCreateNewEmail" (emailChange)="cancel()"></app-jdyx-email></div>
 </div>
+
 
 
 

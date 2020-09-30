@@ -63,9 +63,9 @@ export class JdyxDashboardService {
     };
   }
 
-  mobileSet(mobileValue: string): Observable<string> {
+  mobileSet(mobileValue: string): Observable<ConnResult> {
     const url = `${this.jdyx}/mobile`;
-    return this.http.put<string>(url, 'mobile=' + mobileValue, this.httpOptions);
+    return this.http.put<ConnResult>(url, 'mobile=' + mobileValue, this.httpOptions);
   }
 
   passWordReset(passwordValue: string): Observable<string> {
